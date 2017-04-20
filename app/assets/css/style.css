@@ -1,0 +1,65 @@
+body {
+	background-color:#ffffff;
+	/*padding-top: 90px; */
+}
+.headerpart {
+	height:70px;
+	background: #006699;
+}
+
+.content-container {
+	padding-top: 50px;
+}
+
+.brandName {
+	font-size: 26px;
+    color: #ffffff !important;
+    margin-top: 8px;
+}
+.tileContainer {
+	margin:100px;
+}
+.challangeTile {
+	text-align: center;
+	height: 130px;
+	display: table;
+	
+}
+
+.challangeTile-bodyContent {
+	display: table-cell;
+    vertical-align: middle;
+    background-color: #eee;
+    color: #000000;
+    font-size: 26px;
+    border: 1px solid #069;
+    box-shadow: 2px 2px 1px 1px #069;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.challangeTile-bodyContent:hover {
+	text-decoration: none;	
+}
+
+.searchPart {
+	margin: 10px 0px;
+}
+
+.createAction {
+	margin:10px 0;
+}
+
+.createAction button {
+	font-size: 18px;
+}
+
+.searchTitle {
+	font-weight: bold;
+	font-size:14px;
+}
+
+.modelTitle {
+	font-weight: bold;
+	font-size:20px;	
+}

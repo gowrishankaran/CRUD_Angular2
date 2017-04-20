@@ -1,0 +1,87 @@
+<div class="container content-container">
+
+	<div class="pull-left titlePart">
+		<!-- <h1>{{name}}</h1> -->
+	</div>
+
+	<div class="pull-right createAction">
+		<button class="btn btn-default btn-success" (click)="createNew(content)">Create New</button>
+	</div>
+
+	<table class="table table-bordered table-striped table-sm">
+		<thead>
+			<tr>
+				<th class="text-center">ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Designation</th>
+				<th class="text-center">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let employee of employeeList; let i = index;" >
+				<td class="text-center">{{employee.id}}</td>
+				<td>{{employee.first_name}}</td>
+				<td>{{employee.last_name}}</td>
+				<td>{{employee.email}}</td>
+				<td>{{employee.designation}}</td>
+				<td class="text-center">
+					<button class="btn btn-primary" (click)="edit(content,employee)">Edit</button>
+					<button class="btn btn-danger" (click)="delete(i)">Delete</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">{{modalTitle}}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    	<form class="form-horizontal">
+      	 
+		  <div class="form-group row">
+		    <label for="id" class="col-2 col-form-label">Id</label>
+		    <div class="col-10">
+		      <input type="text" class="form-control" name="id" [(ngModel)]="id" placeholder="Id">
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		    <label for="First Name" class="col-2 col-form-label">First Name</label>
+		    <div class="col-10">
+		      <input type="text" class="form-control" name="firstName" [(ngModel)]="firstName" placeholder="First Name">
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		    <label for="Last Name" class="col-2 col-form-label">Last Name</label>
+		    <div class="col-10">
+		      <input type="text" class="form-control" name="lastName" [(ngModel)]="lastName" placeholder="Last Name" />
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		    <label for="Email" class="col-2 col-form-label">Email</label>
+		    <div class="col-10">
+		      <input type="email" class="form-control" name="email" [(ngModel)]="email" placeholder="Email" />
+		    </div>
+		  </div>
+		  <div class="form-group row">
+		    <label for="Email" class="col-2 col-form-label">Designation</label>
+		    <div class="col-10">
+		      <input type="email" class="form-control" name="designation" [(ngModel)]="designation" placeholder="Designation" />
+		    </div>
+		  </div>
+		
+		</form> 
+  </div>
+  <div class="modal-footer">
+  	<button type="button" class="btn btn-success" *ngIf="isSave" (click)="save()">Save</button>
+  	<button type="button" class="btn btn-success" *ngIf="isUpdate" (click)="update()">Update</button>
+    <button type="button" class="btn btn-danger" (click)="c('Close click')">Close</button>
+  </div>
+</template>
+
