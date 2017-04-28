@@ -14,13 +14,13 @@ It also starts the lite-server and launches in the browser to run the applicatio
 
 This is the simple app to kickstart with Angular 2 (Typescript)
 
-List of features used in APP
+Features used in APP
 - Module
 - Component
 - Service (HTTP Module with Observables)
 - Modal (@ng-bootstrap) with Boostrap 4
 
-List of Angular 2 methods used
+Angular 2 Features used in APP
  - [(ngModel)] - Two Way Binding
  - *ngFor - Directive for Iteratation
  - *ngIf - Directive for Evaluation (Show or Hide)
